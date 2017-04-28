@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GesunderLeben</string>
+
+    <string name="age">Alter</string>
+    <string name="state">Körperliche Verfassung</string>
+</resources>
