@@ -7,12 +7,14 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/header_calorie_counter"
         android:layout_width="240dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Kalorienzähler"
         android:textAlignment="center"
@@ -22,28 +24,26 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/choose_type_of_food"
         android:layout_width="240dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintVertical_bias="0.339" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/confirmation_button_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -69,14 +69,14 @@
         android:background="@drawable/textview_border"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
+        app:layout_constraintVertical_bias="0.703">
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/calorie_fraction_number"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -97,7 +97,7 @@
             app:layout_constraintVertical_bias="0.651" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/calorie_fraction_description"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -118,66 +118,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="119dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/textview_border"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="30"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.347"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.651" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Kohlenhydrate (g)"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.347"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.704" />
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="74dp"
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
@@ -189,14 +129,14 @@
         android:background="@drawable/textview_border"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
+        app:layout_constraintVertical_bias="0.703">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/protein_fraction_number"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -217,7 +157,7 @@
             app:layout_constraintVertical_bias="0.651" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/protein_fraction_description"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -250,14 +190,14 @@
         android:background="@drawable/textview_border"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
+        app:layout_constraintVertical_bias="0.703">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/fat_fraction_number"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -278,7 +218,7 @@
             app:layout_constraintVertical_bias="0" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/fat_fraction_description"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginBottom="8dp"
@@ -299,7 +239,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/back_button_counter"
         android:layout_width="177dp"
         android:layout_height="38dp"
         android:layout_marginBottom="8dp"
@@ -313,5 +253,65 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.945" />
+
+    <LinearLayout
+        android:layout_width="119dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textview_border"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703">
+
+        <TextView
+            android:id="@+id/carb_fraction_number"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="30"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.651" />
+
+        <TextView
+            android:id="@+id/carb_fraction_description"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Kohlenhydrate (g)"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.704" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
