@@ -3,4 +3,12 @@
 
     <string name="age">Alter</string>
     <string name="state">Körperliche Verfassung</string>
+    <string name="datemustbefilled">Alle Daten müssen ausgefült werden</string>
+    <string name="do_you_know_your_body_fat_percentage">Kennen Sie Ihren Körperfettanteil</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="body_fat_percentage_in_percent">Körperfettanteil in %</string>
+    <string name="back">Zurück</string>
+
+
 </resources>
