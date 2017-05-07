@@ -73,4 +73,31 @@ public class Database {
         return sportname;
     }
 
+    public ArrayList<String> getActivityGrade(){
+
+        ArrayList<String> activity_grade = new ArrayList();
+
+        activity_grade.add("Nachtruhe");
+        activity_grade.add("0.95");
+
+        activity_grade.add("überwiegend sitzend, keine Freizeitaktivitäten");
+        activity_grade.add("1.2");
+
+        activity_grade.add("überwiegend sitzend, Freizeitaktivitäten");
+        activity_grade.add("1.3");
+
+        return activity_grade;
+    }
+
+    public ArrayList<String> getActivityGradeDescription(){
+        ArrayList<String> activityGrades = getActivityGrade();
+        ArrayList<String> activityGradeDescription = new ArrayList<>();
+        for(int i=0;i<activityGrades.size();++i){
+            if(i%2==0){
+                activityGradeDescription.add(activityGrades.get(i));
+            }
+        }
+        return activityGradeDescription;
+    }
+
 }
