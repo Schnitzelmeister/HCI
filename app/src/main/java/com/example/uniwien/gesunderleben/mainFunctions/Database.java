@@ -45,4 +45,32 @@ public class Database {
         return foodName;
     }
 
+
+    public ArrayList<String> getSports() {
+
+        ArrayList<String> sports = new ArrayList();
+
+        sports.add("Aerobik(locker)");
+        sports.add("0.1");
+
+        sports.add("Walking(mittel)");
+        sports.add("0.0917");
+
+        sports.add("Joggen(langsam)");
+        sports.add("0.1333");
+
+        return sports;
+    }
+
+    public ArrayList<String> getSportName(){
+        ArrayList<String> sports = getSports();
+        ArrayList<String> sportname = new ArrayList<>();
+        for(int i=0;i<sports.size();++i){
+            if(i%2==0){
+                sportname.add(sports.get(i));
+            }
+        }
+        return sportname;
+    }
+
 }
