@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.uniwien.gesunderleben.MainActivity">
+    tools:context="com.example.uniwien.gesunderleben.UserData0">
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -56,6 +56,7 @@
             android:paddingBottom="50dp">
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioGroupG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
@@ -66,8 +67,8 @@
                     android:id="@+id/radioButtonM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="50dp"
                     android:checked="true"
+                    android:paddingRight="50dp"
                     android:text="M" />
 
                 <RadioButton
@@ -169,6 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="OK" />
             </LinearLayout>
 
