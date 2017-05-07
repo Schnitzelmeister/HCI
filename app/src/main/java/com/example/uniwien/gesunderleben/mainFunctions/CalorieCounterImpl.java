@@ -5,10 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.uniwien.gesunderleben.R;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 /**
  * Created by Raf on 06.05.2017.
@@ -23,6 +27,7 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
             fat_fraction_number_f, fat_fraction_description_f;
     public Button confirmation_button_counter_f, back_button_counter_F;
     public Spinner choose_type_of_food_f;
+    public EditText quanitity_food_consumption_f;
 
 
     protected void onCreate(Bundle savedInstanceState){
@@ -68,20 +73,35 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         back_button_counter_F = (Button) findViewById(R.id.back_button_counter);
         back_button_counter_F.setText("ZURÜCK");
 
+        quanitity_food_consumption_f = (EditText) findViewById(R.id.quanitity_food_consumption);
+        quanitity_food_consumption_f.setHint("Gramm");
+        quanitity_food_consumption_f.setOnClickListener(this);
+
         choose_type_of_food_f = (Spinner) findViewById(R.id.choose_type_of_food);
 
-       SpinnerFilledByFood();
+        SpinnerFilledByFood();
 
     }
 
     public void onClick(View view){
-        ChoosenFood();
 
+        switch (view.getId()){
+
+            case R.id.back_button_counter:
+                this.finish();
+                break;
+
+            case R.id.confirmation_button_counter:
+                Calorie_calculation();
+                break;
+        }
     }
+
 
     public void SpinnerFilledByFood() {
 
-        String[] food = {"Banane","Apfel","Orange"};
+        Database database = new Database();
+        ArrayList<String> food = database.getFoodName();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item,food);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -89,8 +109,30 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
 
     }
 
-    public void ChoosenFood(){
+    public void Calorie_calculation(){
 
+        Double amount_of_food=0.0;
+        String choosenFood=null;
+        DecimalFormat x = new DecimalFormat("0.0");
+
+        try{
+            amount_of_food = Double.parseDouble(quanitity_food_consumption_f.getText().toString());
+            choosenFood = choose_type_of_food_f.getSelectedItem().toString();
+        }catch(Exception e){
+            //TODO
+        }
+
+        Database database = new Database();
+        ArrayList<String> food = database.getFood();
+
+        for (int i=0;i<food.size();++i){
+            if (food.get(i).equals(choosenFood)){
+                fat_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+1)))/100)));
+                protein_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+2)))/100)));
+                carb_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+3)))/100)));
+                calorie_fraction_number_f.setText(String.valueOf((int) (amount_of_food*(Double.parseDouble(food.get(i+4)))/100)));
+            }
+        }
     }
 
 }
