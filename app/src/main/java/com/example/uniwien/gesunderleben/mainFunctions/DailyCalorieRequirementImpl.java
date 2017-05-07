@@ -26,6 +26,7 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
 
 
     protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daily_calorie_requirement);
 
@@ -58,11 +59,8 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
-
     }
 
     public void onClick(View view){
@@ -74,7 +72,6 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
                 break;
 
         }
-
     }
 
     public void spinnerFilledByActvityGrade(){
@@ -88,15 +85,15 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
 
     public void calculateEnergyAtBeginning(){
         Integer age = 50;
-        // TODO getAge()
+        // TODO getAge() anknüpfen
 
         Integer weight = 60;
-        // TODO getWeight()
+        // TODO getWeight() aknüpfen
 
         Boolean gender = true;
-        // TODO getGender()
+        // TODO getGender() aknüpfen
 
-        Integer restEnergy = 0;
+        Integer restEnergy;
 
         if (gender){
             restEnergy = ((int) (((0.047*weight)+((1.009-(0.01452*age))+3.21))*239));
@@ -111,13 +108,13 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
 
     public void calculateTotalEnergy(String item){
         Integer age = 50;
-        // TODO getAge()
+        // TODO getAge() anknüpfen
 
         Integer weight = 60;
-        // TODO getWeight()
+        // TODO getWeight() anknüpfen
 
         Boolean gender = true;
-        // TODO getGender()
+        // TODO getGender() anknüpfen
 
         Database database = new Database();
         ArrayList<String> activityGrade = database.getActivityGrade();

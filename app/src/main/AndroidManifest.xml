@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserData1">
+        <activity android:name=".UserData0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserData1"></activity>
+        <activity android:name=".mainFunctions.DailyCalorieRequirementImpl"></activity>
+        <activity android:name=".mainFunctions.CalorieCounterImpl"></activity>
+        <activity android:name=".mainFunctions.BurnedCalorieCalculatorImpl"></activity>
     </application>
 
 </manifest>

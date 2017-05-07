@@ -26,6 +26,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
 
 
     protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.burned_calorie_calculator);
 
@@ -63,10 +64,10 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
                 burnedCalorie();
                 break;
         }
-
     }
 
     public void spinnerFilledBySports(){
+
         Database database = new Database();
         ArrayList<String> sports = database.getSportName();
 
@@ -77,20 +78,13 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
 
     public void burnedCalorie() {
 
-        Double workout_time = 0.0;
-        Double sport_quotient = 0.0;
-        String choosenSport = null;
+        Double sport_quotient;
         Double age = 70.0;
+        //age = user.getAge();
+        // TODO Alter anknüpfen
 
-
-        try {
-            //age = user.getAge();
-            // TODO Alter festsetzen
-            workout_time = Double.parseDouble(workout_time_f.getText().toString());
-            choosenSport = choose_type_of_sport_f.getSelectedItem().toString();
-        } catch (Exception e) {
-            //TODO
-        }
+        Double workout_time = Double.parseDouble(workout_time_f.getText().toString());
+        String choosenSport = choose_type_of_sport_f.getSelectedItem().toString();
 
         Database database = new Database();
         ArrayList<String> sport = database.getSports();
@@ -100,10 +94,8 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
                 sport_quotient = Double.parseDouble(sport.get(i+1));
                 result_field_calculator_f.setText("Sie haben " + ((int) (age * sport_quotient * workout_time)) + " Kalorien verbraucht!");
             }
-
         }
     }
-
 
 }
 
