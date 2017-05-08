@@ -89,7 +89,6 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
     public void calculateEnergyAtBeginning(){
 
         Integer age = User.user.getAge();
-        //Integer weight = Integer.parseInt(String.valueOf(User.user.getActualParam(ParameterEnum.Gewicht)));
         Integer weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
         Boolean gender = User.user.getGender();
 
@@ -101,7 +100,7 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
             restEnergy = ((int) (((0.047*weight)+((-(0.01452*age))+3.21))*239));
         }
 
-        result_field_rest_energy_number_f.setText(String.valueOf(restEnergy)+" kcal/Tag");
+        result_field_rest_energy_number_f.setText(String.valueOf(Math.round(restEnergy*0.95))+" kcal/Tag");
         result_field_total_energy_number_f.setText(String.valueOf(Math.round(restEnergy*0.95))+" kcal/Tag");
 
     }

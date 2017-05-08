@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.uniwien.gesunderleben.ParameterEnum;
 import com.example.uniwien.gesunderleben.R;
 import com.example.uniwien.gesunderleben.User;
 
@@ -81,7 +82,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
     public void burnedCalorie() {
 
         Double sport_quotient;
-        Double age = (double) User.user.getAge();
+        Integer weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
 
         Double workout_time = Double.parseDouble(workout_time_f.getText().toString());
         String choosenSport = choose_type_of_sport_f.getSelectedItem().toString();
@@ -92,7 +93,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         for (int i = 0; i < sport.size(); ++i) {
             if (sport.get(i).equals(choosenSport)) {
                 sport_quotient = Double.parseDouble(sport.get(i+1));
-                result_field_calculator_f.setText("Sie haben " + ((int) (age * sport_quotient * workout_time)) + " Kalorien verbraucht!");
+                result_field_calculator_f.setText("Sie haben " + ((int) (weight * sport_quotient * workout_time)) + " Kalorien verbraucht!");
             }
         }
     }
