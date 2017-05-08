@@ -1,6 +1,7 @@
 package com.example.uniwien.gesunderleben.mainFunctions;
 
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,7 +10,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.uniwien.gesunderleben.ParameterEnum;
 import com.example.uniwien.gesunderleben.R;
+import com.example.uniwien.gesunderleben.User;
 
 import java.util.ArrayList;
 
@@ -68,7 +71,7 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
         switch (view.getId()) {
 
             case R.id.back_button_calorie_requirement:
-                this.finish();
+                NavUtils.navigateUpFromSameTask(this);
                 break;
 
         }
@@ -84,14 +87,11 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
     }
 
     public void calculateEnergyAtBeginning(){
-        Integer age = 50;
-        // TODO getAge() anknüpfen
 
-        Integer weight = 60;
-        // TODO getWeight() aknüpfen
-
-        Boolean gender = true;
-        // TODO getGender() aknüpfen
+        Integer age = User.user.getAge();
+        //Integer weight = Integer.parseInt(String.valueOf(User.user.getActualParam(ParameterEnum.Gewicht)));
+        Integer weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
+        Boolean gender = User.user.getGender();
 
         Integer restEnergy;
 
@@ -107,14 +107,10 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
     }
 
     public void calculateTotalEnergy(String item){
-        Integer age = 50;
-        // TODO getAge() anknüpfen
 
-        Integer weight = 60;
-        // TODO getWeight() anknüpfen
-
-        Boolean gender = true;
-        // TODO getGender() anknüpfen
+        Integer age = User.user.getAge();
+        Integer weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
+        Boolean gender = User.user.getGender();
 
         Database database = new Database();
         ArrayList<String> activityGrade = database.getActivityGrade();

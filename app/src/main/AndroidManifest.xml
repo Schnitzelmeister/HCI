@@ -26,6 +26,15 @@
         <activity android:name=".UserData2" />
         <activity android:name=".UserData3" />
         <activity android:name=".UserData4" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".mainFunctions.BurnedCalorieCalculatorImpl" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".mainFunctions.DailyCalorieRequirementImpl" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".mainFunctions.CalorieCounterImpl" />
     </application>
 
 </manifest>

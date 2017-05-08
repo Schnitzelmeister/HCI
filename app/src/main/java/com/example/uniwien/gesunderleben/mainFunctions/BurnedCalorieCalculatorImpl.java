@@ -1,6 +1,7 @@
 package com.example.uniwien.gesunderleben.mainFunctions;
 
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.uniwien.gesunderleben.R;
+import com.example.uniwien.gesunderleben.User;
 
 import java.util.ArrayList;
 
@@ -57,7 +59,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         switch (view.getId()){
 
             case R.id.back_button_calculator:
-                this.finish();
+                NavUtils.navigateUpFromSameTask(this);
                 break;
 
             case R.id.confirmation_button_calculator:
@@ -79,9 +81,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
     public void burnedCalorie() {
 
         Double sport_quotient;
-        Double age = 70.0;
-        //age = user.getAge();
-        // TODO Alter anknüpfen
+        Double age = (double) User.user.getAge();
 
         Double workout_time = Double.parseDouble(workout_time_f.getText().toString());
         String choosenSport = choose_type_of_sport_f.getSelectedItem().toString();
