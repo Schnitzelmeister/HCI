@@ -1,5 +1,10 @@
 package com.example.uniwien.gesunderleben;
 
+import android.content.Context;
+import android.os.Environment;
+import android.util.Log;
+
+import java.io.File;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
@@ -30,7 +35,12 @@ public class User implements Serializable {
     //Serialization methods
     public static void loadUser() {
         try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(User.file));
+            File file = new File(MyApplication.getAppContext().getFilesDir(), User.file);
+ //if (file.exists()) file.delete();
+            Log.d("loadUser",  MyApplication.getAppContext().getFilesDir() + "/" + User.file);
+
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
             User.user = (User)ois.readObject();
             ois.close();
         }
@@ -49,7 +59,11 @@ public class User implements Serializable {
     public static void saveUser() throws IllegalArgumentException {
         try
         {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(User.file));
+            File file = new File(MyApplication.getAppContext().getFilesDir(), User.file);
+            Log.d("saveUser",  MyApplication.getAppContext().getFilesDir() + "/" + User.file);
+
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(User.user);
             oos.flush();
             oos.close();
@@ -57,7 +71,8 @@ public class User implements Serializable {
         catch(Exception e)
         {
             //e.printStackTrace();
-            throw new IllegalArgumentException("Serialization Exception occured");
+            Log.e("Some Tag", e.getMessage(), e);
+            throw new IllegalArgumentException("Serialization Exception");
         }
     }
 
@@ -68,12 +83,15 @@ public class User implements Serializable {
 
 
     // instance properties
-    private boolean registred = false;
-    public boolean getRegistred() { return registred; }
-    public void setRegistred(boolean value) { registred = value; }
+    private Date dateRegistred = null;
+    public boolean getRegistred() { return (dateRegistred != null); }
+    public void setRegistred() { dateRegistred = getCurrentDate(); }
 
+    private int age = -1;
+    public int getAge() { return age; }
+    public void setAge(int value) { age = value; }
 
-    private boolean gender;
+    private boolean gender = true;
     public boolean getGender() { return gender; }
     public void setGender(boolean value) { gender = value; }
 
@@ -107,6 +125,10 @@ public class User implements Serializable {
             params.put(current, new TreeMap<ParameterEnum, Object>() );
 
         params.get(current).put(param, value);
+    }
+
+    public void resetData() {
+        params.clear();
     }
 
     // map of food data

@@ -5,5 +5,5 @@ package com.example.uniwien.gesunderleben;
  */
 
 public enum ParameterEnum {
-    Alter, KoerperlicheVerfassung, KoerperAnteil, Gewicht, Koerpergroesse
+    KoerperlicheVerfassung, KoerperAnteil, Gewicht, Koerpergroesse, Wuenschgewicht, Nahrungsplan, Fitnessplan
 }

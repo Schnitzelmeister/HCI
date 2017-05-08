@@ -1,14 +1,37 @@
 <resources>
     <string name="app_name">GesunderLeben</string>
 
+    <string name="reset">Reset</string>
+    <string name="main">Main</string>
+    <string name="akt">Akt.</string>
+    <string name="do_you_want_to_reset">Do you want to reset your Data?</string>
     <string name="age">Alter</string>
     <string name="state">Körperliche Verfassung</string>
     <string name="datemustbefilled">Alle Daten müssen ausgefült werden</string>
-    <string name="do_you_know_your_body_fat_percentage">Kennen Sie Ihren Körperfettanteil</string>
+    <string name="do_you_know_your_body_fat_percentage">Kennen Sie Ihren Körperfettanteil?</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="body_fat_percentage_in_percent">Körperfettanteil in %</string>
+    <string name="do_you_know_your_body_antropometry">Kennen Sie Ihre Anthropometrie?</string>
+    <string name="body_height_in_cm">Körpergröße in cm</string>
+    <string name="weight_in_kg">Gewicht in kg</string>
     <string name="back">Zurück</string>
+    <string name="foodplan">Nahrungsplan</string>
+    <string name="fitnessplan">Fitnessplan</string>
+    <string name="desired_weight">Wünschgewicht</string>
+    <string name="kg">Kg</string>
 
+    <string name="welcome">Willkommen bei "Gesundleben"</string>
+    <string name="daily_plan">Tagesplan für heute</string>
+    <string name="progress">Fortschritt</string>
+    <string name="time_plan">Zeitplan</string>
+    <string name="new_plan">Neuer Plan</string>
+
+
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
