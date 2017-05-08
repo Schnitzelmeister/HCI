@@ -31,6 +31,7 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
 
 
     protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calorie_counter);
 
@@ -79,8 +80,7 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
 
         choose_type_of_food_f = (Spinner) findViewById(R.id.choose_type_of_food);
 
-        SpinnerFilledByFood();
-
+        spinnerFilledByFood();
     }
 
     public void onClick(View view){
@@ -92,13 +92,12 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.confirmation_button_counter:
-                Calorie_calculation();
+                calorieCalculation();
                 break;
         }
     }
 
-
-    public void SpinnerFilledByFood() {
+    public void spinnerFilledByFood() {
 
         Database database = new Database();
         ArrayList<String> food = database.getFoodName();
@@ -106,33 +105,25 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item,food);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         choose_type_of_food_f.setAdapter(adapter);
-
     }
 
-    public void Calorie_calculation(){
+    public void calorieCalculation(){
 
-        Double amount_of_food=0.0;
-        String choosenFood=null;
         DecimalFormat x = new DecimalFormat("0.0");
 
-        try{
-            amount_of_food = Double.parseDouble(quanitity_food_consumption_f.getText().toString());
-            choosenFood = choose_type_of_food_f.getSelectedItem().toString();
-        }catch(Exception e){
-            //TODO
-        }
+        Double amountOfFood = Double.parseDouble(quanitity_food_consumption_f.getText().toString());
+        String choosenFood = choose_type_of_food_f.getSelectedItem().toString();
 
         Database database = new Database();
         ArrayList<String> food = database.getFood();
 
         for (int i=0;i<food.size();++i){
             if (food.get(i).equals(choosenFood)){
-                fat_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+1)))/100)));
-                protein_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+2)))/100)));
-                carb_fraction_number_f.setText(String.valueOf(x.format(amount_of_food*(Double.parseDouble(food.get(i+3)))/100)));
-                calorie_fraction_number_f.setText(String.valueOf((int) (amount_of_food*(Double.parseDouble(food.get(i+4)))/100)));
+                fat_fraction_number_f.setText(String.valueOf(x.format(amountOfFood*(Double.parseDouble(food.get(i+1)))/100)));
+                protein_fraction_number_f.setText(String.valueOf(x.format(amountOfFood*(Double.parseDouble(food.get(i+2)))/100)));
+                carb_fraction_number_f.setText(String.valueOf(x.format(amountOfFood*(Double.parseDouble(food.get(i+3)))/100)));
+                calorie_fraction_number_f.setText(String.valueOf((int) (amountOfFood*(Double.parseDouble(food.get(i+4)))/100)));
             }
         }
     }
-
 }
