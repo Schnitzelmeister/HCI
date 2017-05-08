@@ -1,0 +1,11 @@
+<plans>
+    <plan>
+        <name>Nahrungsplan 1</name>
+        <description>Dauer: 8 Wochen&#10;Art: Diät&#10;Effekt: Schlank und gesund</description>
+    </plan>
+
+    <plan>
+        <name>Nahrungsplan 2</name>
+        <description>Dauer: 2 Wochen&#10;Art: Diät&#10;Effekt: Schlank und gesund</description>
+    </plan>
+</plans>
