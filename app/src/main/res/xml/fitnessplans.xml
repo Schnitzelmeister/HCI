@@ -1,0 +1,11 @@
+<plans>
+    <plan>
+        <name>Fitnessplan 1</name>
+        <description>Dauer: 8 Wochen&#10;Art: Diaete&#10;Effekt: Muskelzuwachs bis 3 Kg/Monat</description>
+    </plan>
+
+    <plan>
+        <name>Fitnessplan 2</name>
+        <description>Dauer: 2 Wochen&#10;Art: Diaete&#10;Effekt: Muskelzuwachs bis 3 Kg/Monat</description>
+    </plan>
+</plans>

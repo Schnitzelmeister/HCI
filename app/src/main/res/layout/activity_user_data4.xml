@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uniwien.gesunderleben.UserData4" >
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <fragment
+            android:id="@+id/headerFragment"
+            android:name="com.example.uniwien.gesunderleben.Header"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollablContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerView"
+        android:layout_below="@+id/headerView" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="50dp"
+                    android:textAlignment="center" >
+
+                    <Spinner
+                        android:id="@+id/spinnerFoodplan"
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/foodplan" />
+
+                    <TextView
+                        android:id="@+id/addressFoodplan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:gravity="left"
+                        android:lines="4"
+                        android:maxLines="4"></TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="50dp"
+                    android:textAlignment="center" >
+
+                    <Spinner
+                        android:id="@+id/spinnerFitnessplan"
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fitnessplan" />
+
+                    <TextView
+                        android:id="@+id/addressFitnessplan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:gravity="left"
+                        android:lines="4"
+                        android:maxLines="4"></TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="50dp"
+                    android:textAlignment="center" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <EditText
+                            android:id="@+id/editTextDesiredWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="1dp"
+                            android:ems="10"
+                            android:hint="@string/desired_weight"
+                            android:inputType="numberSigned"
+                            android:maxLength="3"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="50dp"
+                    android:textAlignment="center" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Button
+                            android:id="@+id/buttonOK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClick"
+                            android:text="OK" />
+
+                        <Button
+                            android:id="@+id/buttonBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClick"
+                            android:text="@string/back" />
+
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <fragment
+            android:id="@+id/footerFragment"
+            android:name="com.example.uniwien.gesunderleben.Footer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
