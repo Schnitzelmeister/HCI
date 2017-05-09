@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
             case R.id.buttonProgress: {
-                //Intent intent = new Intent(this, UserData4.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, FortschrittActivity.class);
+                startActivity(intent);
                 break;
             }
             case R.id.buttonTimePlan: {
-                //Intent intent = new Intent(this, UserData4.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, ZeitplanActivity.class);
+                startActivity(intent);
                 break;
             }
             case R.id.buttonNewPlan: {
