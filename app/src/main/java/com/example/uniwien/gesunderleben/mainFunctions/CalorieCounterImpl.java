@@ -1,6 +1,7 @@
 package com.example.uniwien.gesunderleben.mainFunctions;
 
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -88,7 +89,7 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         switch (view.getId()){
 
             case R.id.back_button_counter:
-                this.finish();
+                NavUtils.navigateUpFromSameTask(this);
                 break;
 
             case R.id.confirmation_button_counter:
