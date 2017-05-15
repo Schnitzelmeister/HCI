@@ -1,0 +1,201 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fortschritt"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@mipmap/weight_icon"
+        android:layout_below="@+id/textView12"
+        android:layout_toStartOf="@+id/textView12"
+        app:layout_constraintRight_toLeftOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintHorizontal_bias="0.509" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gewicht (neu): 78 Kg"
+        android:textColor="#008000"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toEndOf="@+id/imageView1"
+        tools:layout_editor_absoluteY="115dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.467" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gewicht (alt): 85 Kg"
+        android:textColor="#ff0000"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_toEndOf="@+id/imageView1"
+        tools:layout_editor_absoluteY="132dp"
+        android:layout_marginLeft="123dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@mipmap/tempo_icon"
+        android:layout_below="@+id/textView12"
+        android:layout_toStartOf="@+id/textView12"
+        app:layout_constraintRight_toLeftOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.509" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Lauftempo (neu): 9,8 Km/h"
+        android:textColor="#008000"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        tools:layout_editor_absoluteY="317dp"
+        android:layout_marginLeft="122dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Lauftempo (alt): 8,78 Km/h"
+        android:textColor="#ff0000"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        tools:layout_editor_absoluteY="300dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@mipmap/time_icon"
+        android:layout_below="@+id/textView12"
+        android:layout_toStartOf="@+id/textView12"
+        app:layout_constraintRight_toLeftOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:layout_constraintHorizontal_bias="0.509" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Laufzeit (neu): 75 Minuten"
+        android:textColor="#008000"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3"
+        tools:layout_editor_absoluteY="206dp"
+        tools:layout_editor_absoluteX="123dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Laufzeit (alt): 80 Minuten"
+        android:textColor="#ff0000"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3"
+        tools:layout_editor_absoluteY="223dp"
+        tools:layout_editor_absoluteX="123dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@mipmap/distance_icon"
+        android:layout_below="@+id/textView12"
+        android:layout_toStartOf="@+id/textView12"
+        app:layout_constraintRight_toLeftOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Distanz (neu): 12,74 Km"
+        android:textColor="#008000"
+        android:layout_above="@+id/textView14"
+        android:layout_toEndOf="@+id/imageView4"
+        tools:layout_editor_absoluteY="388dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Durchschn. Distanz (neu): 10,64 Km"
+        android:textColor="#ff0000"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_toEndOf="@+id/imageView4"
+        tools:layout_editor_absoluteY="405dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Zurück"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="35dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="364dp" />
+
+
+</android.support.constraint.ConstraintLayout>
