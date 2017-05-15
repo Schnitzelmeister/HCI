@@ -48,13 +48,13 @@ public class Footer extends Fragment implements View.OnClickListener {
             }
 
             case R.id.imageButtonTagesbedarf: {
-                Intent intent = new Intent(getActivity(), DailyCalorieRequirementImpl.class);
+                Intent intent = new Intent(getActivity(), CalorieCounterImpl.class);
                 startActivity(intent);
                 break;
             }
 
             case R.id.imageButtonKalorienzaehler: {
-                Intent intent = new Intent(getActivity(), CalorieCounterImpl.class);
+                Intent intent = new Intent(getActivity(), DailyCalorieRequirementImpl.class);
                 startActivity(intent);
                 break;
             }

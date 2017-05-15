@@ -6,8 +6,15 @@ import java.util.ArrayList;
  * Created by Raf on 07.05.2017.
  */
 
+/**
+ * Hardcodierte "Datenbank" die nur vorläufig für High-Fidelity-Prototyp verwendet wird.
+ * Später kann richtige Datenbank angebunden werden.
+ */
 public class Database {
 
+    /**
+     * @return alle Nahrungsmittel aus der Datenbank
+     */
     public ArrayList<String> getFood(){
 
         ArrayList<String> food = new ArrayList();
@@ -34,6 +41,10 @@ public class Database {
 
     }
 
+    /**
+     *
+     * @return alle Nahrungsmittelnamen aus der Datenbank
+     */
     public ArrayList<String> getFoodName(){
 
         ArrayList<String> food = getFood();
@@ -48,7 +59,10 @@ public class Database {
         return foodName;
     }
 
-
+    /**
+     *
+     * @return alle Sportarten aus der Datenbank
+     */
     public ArrayList<String> getSports() {
 
         ArrayList<String> sports = new ArrayList();
@@ -65,6 +79,10 @@ public class Database {
         return sports;
     }
 
+    /**
+     *
+     * @return alle Sportartbezeichnungen aus der Datenbank
+     */
     public ArrayList<String> getSportName(){
 
         ArrayList<String> sports = getSports();
@@ -79,6 +97,10 @@ public class Database {
         return sportname;
     }
 
+    /**
+     *
+     * @return alle Aktivitätsstufen aus der Datenbank
+     */
     public ArrayList<String> getActivityGrade(){
 
         ArrayList<String> activity_grade = new ArrayList();
@@ -95,6 +117,10 @@ public class Database {
         return activity_grade;
     }
 
+    /**
+     *
+     * @return alle Aktivitätsstufen-Beschreibungen aus der Datenbank
+     */
     public ArrayList<String> getActivityGradeDescription(){
 
         ArrayList<String> activityGrades = getActivityGrade();

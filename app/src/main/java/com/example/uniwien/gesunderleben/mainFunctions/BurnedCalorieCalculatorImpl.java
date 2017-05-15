@@ -22,12 +22,18 @@ import java.util.ArrayList;
 
 public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements View.OnClickListener {
 
+    /**
+     * Variablendeklarierung
+     */
     public TextView header_burned_calorie_calculator_f, result_field_calculator_f;
     public Button confirmation_button_calculator_f, back_button_calculator_f;
     public Spinner choose_type_of_sport_f;
     public EditText workout_time_f;
 
-
+    /**
+     * Variableninitialiserung
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
@@ -48,6 +54,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         choose_type_of_sport_f = (Spinner) findViewById(R.id.choose_type_of_sport);
 
         workout_time_f = (EditText) findViewById(R.id.workout_time);
+        workout_time_f.setHint("Minuten");
 
         confirmation_button_calculator_f.setOnClickListener(this);
         back_button_calculator_f.setOnClickListener(this);
@@ -55,6 +62,10 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         spinnerFilledBySports();
     }
 
+    /**
+     * Wird Ein Button gedrückt so wird hier entsprechend reagiert.
+     * @param view
+     */
     public void onClick(View view){
 
         switch (view.getId()){
@@ -69,6 +80,9 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         }
     }
 
+    /**
+     * Hier wird der Spinner mit Sportarten befüllt.
+     */
     public void spinnerFilledBySports(){
 
         Database database = new Database();
@@ -79,6 +93,9 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         choose_type_of_sport_f.setAdapter(adapter);
     }
 
+    /**
+     * Hier werden die verbrannten Kalorien berechnet.
+     */
     public void burnedCalorie() {
 
         Double sport_quotient;

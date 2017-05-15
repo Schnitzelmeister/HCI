@@ -22,12 +22,18 @@ import java.util.ArrayList;
 
 public class DailyCalorieRequirementImpl extends AppCompatActivity implements View.OnClickListener {
 
+    /**
+     * Variablendeklarierung
+     */
     public TextView header_daily_calorie_requirement_f, result_field_rest_energy_descrption_f,
             result_field_rest_energy_number_f, result_field_total_energy_f, result_field_total_energy_number_f;
     public Button back_button_calorie_requirement_f;
     public Spinner choose_grade_of_activity_f;
 
-
+    /**
+     * Variableninitialisierung
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
@@ -66,6 +72,10 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
         });
     }
 
+    /**
+     * Wird Ein Button gedrückt so wird hier entsprechend reagiert.
+     * @param view
+     */
     public void onClick(View view){
 
         switch (view.getId()) {
@@ -77,6 +87,9 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
         }
     }
 
+    /**
+     * Hier wird der Spinner mit den Aktivitätsgraden befüllt.
+     */
     public void spinnerFilledByActvityGrade(){
         Database database = new Database();
         ArrayList<String> activity_grade = database.getActivityGradeDescription();
@@ -86,6 +99,9 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
         choose_grade_of_activity_f.setAdapter(adapter);
     }
 
+    /**
+     * Hier wird der Ruheenergieverbrauch berechnet.
+     */
     public void calculateEnergyAtBeginning(){
 
         Integer age = User.user.getAge();
@@ -105,6 +121,10 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
 
     }
 
+    /**
+     * Hier wird der Gesamtenergieverbrauch berechnet.
+     * @param item
+     */
     public void calculateTotalEnergy(String item){
 
         Integer age = User.user.getAge();

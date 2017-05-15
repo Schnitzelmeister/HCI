@@ -21,6 +21,9 @@ import java.util.ArrayList;
 
 public class CalorieCounterImpl extends AppCompatActivity implements View.OnClickListener{
 
+    /**
+     * Variablendeklarierung
+     */
     public TextView header_calorie_counter_f,
             calorie_fraction_number_f, calorie_fraction_description_f,
             protein_fraction_number_f, protein_fraction_description_f,
@@ -30,7 +33,10 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
     public Spinner choose_type_of_food_f;
     public EditText quanitity_food_consumption_f;
 
-
+    /**
+     * Variableninitialisierung
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
@@ -84,6 +90,10 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         spinnerFilledByFood();
     }
 
+    /**
+     * Wird Ein Button gedrückt so wird hier entsprechend reagiert.
+     * @param view
+     */
     public void onClick(View view){
 
         switch (view.getId()){
@@ -98,6 +108,9 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         }
     }
 
+    /**
+     * Hier wird der Spinner mit Nahrungsmitteln befüllt.
+     */
     public void spinnerFilledByFood() {
 
         Database database = new Database();
@@ -108,6 +121,9 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         choose_type_of_food_f.setAdapter(adapter);
     }
 
+    /**
+     * Hier werden die Kalorien eine Nahrungsmittels berechnet.
+     */
     public void calorieCalculation(){
 
         DecimalFormat x = new DecimalFormat("0.0");
