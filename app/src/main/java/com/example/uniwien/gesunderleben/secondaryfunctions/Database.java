@@ -1,4 +1,4 @@
-package com.example.uniwien.gesunderleben.mainFunctions;
+package com.example.uniwien.gesunderleben.secondaryfunctions;
 
 import java.util.ArrayList;
 

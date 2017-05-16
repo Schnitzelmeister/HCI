@@ -28,13 +28,13 @@
         <activity android:name=".UserData4" />
         <activity
             android:parentActivityName=".MainActivity"
-            android:name=".mainFunctions.BurnedCalorieCalculatorImpl" />
+            android:name=".secondaryfunctions.BurnedCalorieCalculatorImpl" />
         <activity
             android:parentActivityName=".MainActivity"
-            android:name=".mainFunctions.DailyCalorieRequirementImpl" />
+            android:name=".secondaryfunctions.DailyCalorieRequirementImpl" />
         <activity
             android:parentActivityName=".MainActivity"
-            android:name=".mainFunctions.CalorieCounterImpl" />
+            android:name=".secondaryfunctions.CalorieCounterImpl" />
         <activity android:name=".FortschrittActivity" />
         <activity android:name=".ZeitplanActivity" />
         <activity android:name=".Planner" />

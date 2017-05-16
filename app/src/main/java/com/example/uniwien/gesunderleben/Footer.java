@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.uniwien.gesunderleben.mainFunctions.BurnedCalorieCalculatorImpl;
-import com.example.uniwien.gesunderleben.mainFunctions.CalorieCounterImpl;
-import com.example.uniwien.gesunderleben.mainFunctions.DailyCalorieRequirementImpl;
+import com.example.uniwien.gesunderleben.secondaryfunctions.BurnedCalorieCalculatorImpl;
+import com.example.uniwien.gesunderleben.secondaryfunctions.CalorieCounterImpl;
+import com.example.uniwien.gesunderleben.secondaryfunctions.DailyCalorieRequirementImpl;
 
 /**
  * Footer menu
