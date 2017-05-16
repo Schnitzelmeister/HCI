@@ -37,6 +37,7 @@
             android:name=".mainFunctions.CalorieCounterImpl" />
         <activity android:name=".FortschrittActivity" />
         <activity android:name=".ZeitplanActivity" />
+        <activity android:name=".Planner" />
     </application>
 
 </manifest>
