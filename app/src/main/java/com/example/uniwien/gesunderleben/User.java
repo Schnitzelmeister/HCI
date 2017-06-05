@@ -1,7 +1,5 @@
 package com.example.uniwien.gesunderleben;
 
-import android.content.Context;
-import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
@@ -34,8 +32,9 @@ public class User implements Serializable {
 
     //Serialization methods
     public static void loadUser() {
+        File file = null;
         try {
-            File file = new File(MyApplication.getAppContext().getFilesDir(), User.file);
+            file = new File(MyApplication.getAppContext().getFilesDir(), User.file);
  //if (file.exists()) file.delete();
             Log.d("loadUser",  MyApplication.getAppContext().getFilesDir() + "/" + User.file);
 
@@ -49,9 +48,11 @@ public class User implements Serializable {
             return;
         }
         catch(ClassNotFoundException e) {
+            if (file != null && file.exists()) file.delete();
             throw new IllegalArgumentException("Illegal DataSource");
         }
         catch (IOException e) {
+            if (file != null && file.exists()) file.delete();
             throw new IllegalArgumentException("IO Exception in DataSource");
         }
     }
@@ -83,9 +84,9 @@ public class User implements Serializable {
 
 
     // instance properties
-    private Date dateRegistred = null;
-    public boolean getRegistred() { return (dateRegistred != null); }
-    public void setRegistred() { dateRegistred = getCurrentDate(); }
+    private Date dateRegistered = null;
+    public boolean getRegistered() { return (dateRegistered != null); }
+    public void setRegistered() { dateRegistered = getCurrentDate(); }
 
     private int age = -1;
     public int getAge() { return age; }

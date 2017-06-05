@@ -71,7 +71,7 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
         switch (view.getId()){
 
             case R.id.back_button_calculator:
-                NavUtils.navigateUpFromSameTask(this);
+                this.finish();
                 break;
 
             case R.id.confirmation_button_calculator:

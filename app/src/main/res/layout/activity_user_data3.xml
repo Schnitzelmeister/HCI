@@ -50,44 +50,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/do_you_know_your_body_antropometry"
+                        android:text="@string/antropometry"
                         android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="50dp"
-                    android:textAlignment="center" >
-
-                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/radioGroupFA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:gravity="center_horizontal"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/radioButtonY"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="50dp"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/radioButtonN"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
                 </TableRow>
 
                 <TableRow

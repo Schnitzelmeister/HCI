@@ -82,8 +82,8 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         back_button_counter_F.setText("ZURÜCK");
 
         quanitity_food_consumption_f = (EditText) findViewById(R.id.quanitity_food_consumption);
-        quanitity_food_consumption_f.setHint("Gramm");
-        quanitity_food_consumption_f.setOnClickListener(this);
+        //quanitity_food_consumption_f.setHint("Gramm");
+        //quanitity_food_consumption_f.setOnClickListener(this);
 
         choose_type_of_food_f = (Spinner) findViewById(R.id.choose_type_of_food);
 
@@ -99,7 +99,7 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
         switch (view.getId()){
 
             case R.id.back_button_counter:
-                NavUtils.navigateUpFromSameTask(this);
+                this.finish();
                 break;
 
             case R.id.confirmation_button_counter:

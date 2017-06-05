@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class FortschrittActivity extends AppCompatActivity {
 
@@ -15,8 +16,7 @@ public class FortschrittActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         if(v.getId() == R.id.backButton1){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            this.finish();
         }
     }
 }

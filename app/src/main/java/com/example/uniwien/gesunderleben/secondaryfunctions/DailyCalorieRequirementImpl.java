@@ -81,7 +81,7 @@ public class DailyCalorieRequirementImpl extends AppCompatActivity implements Vi
         switch (view.getId()) {
 
             case R.id.back_button_calorie_requirement:
-                NavUtils.navigateUpFromSameTask(this);
+                this.finish();
                 break;
 
         }

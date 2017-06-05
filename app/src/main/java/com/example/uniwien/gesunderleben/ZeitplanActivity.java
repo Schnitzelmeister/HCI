@@ -15,8 +15,7 @@ public class ZeitplanActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         if(v.getId() == R.id.backButton){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            this.finish();
         }
     }
 }
