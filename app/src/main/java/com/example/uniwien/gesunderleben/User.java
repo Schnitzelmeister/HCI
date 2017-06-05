@@ -129,6 +129,7 @@ public class User implements Serializable {
     }
 
     public void resetData() {
+        dateRegistered = null;
         params.clear();
     }
 

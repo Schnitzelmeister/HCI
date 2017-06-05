@@ -99,9 +99,17 @@ public class BurnedCalorieCalculatorImpl extends AppCompatActivity implements Vi
     public void burnedCalorie() {
 
         Double sport_quotient;
-        Integer weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
+        Integer weight = 1;
+        Double workout_time = 0d;
+        try {
+            workout_time = Double.parseDouble(workout_time_f.getText().toString());
+            weight = (int) User.user.getActualParam(ParameterEnum.Gewicht);
+        }
+        catch(Exception e) {
+            workout_time = 0d;
+            weight = 1;
+        }
 
-        Double workout_time = Double.parseDouble(workout_time_f.getText().toString());
         String choosenSport = choose_type_of_sport_f.getSelectedItem().toString();
 
         Database database = new Database();

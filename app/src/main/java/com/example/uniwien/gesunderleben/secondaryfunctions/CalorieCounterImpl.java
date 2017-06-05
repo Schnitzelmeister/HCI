@@ -128,7 +128,13 @@ public class CalorieCounterImpl extends AppCompatActivity implements View.OnClic
 
         DecimalFormat x = new DecimalFormat("0.0");
 
-        Double amountOfFood = Double.parseDouble(quanitity_food_consumption_f.getText().toString());
+        Double amountOfFood = 0d;
+        try {
+            amountOfFood = Double.parseDouble(quanitity_food_consumption_f.getText().toString());
+        }
+        catch(Exception e) {
+            amountOfFood = 0d;
+        }
         String choosenFood = choose_type_of_food_f.getSelectedItem().toString();
 
         Database database = new Database();
