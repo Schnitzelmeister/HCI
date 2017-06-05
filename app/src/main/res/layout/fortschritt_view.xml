@@ -194,6 +194,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="19dp"
         android:text="Zurück"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -62,6 +62,7 @@ public class Header extends Fragment implements View.OnClickListener {
                                     User.user.resetData();
                                     User.saveUser();
                                     Intent intent = new Intent(getActivity(), UserData1.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     startActivity(intent);
                                 }
                                 catch (IllegalArgumentException e) {
@@ -86,6 +87,7 @@ public class Header extends Fragment implements View.OnClickListener {
             case R.id.buttonMain: {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 getActivity().finish();
                 startActivity(intent);
                 break;

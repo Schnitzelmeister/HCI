@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -38,7 +37,7 @@ public class UserData2 extends AppCompatActivity implements View.OnClickListener
 
 
         //hide Header
-        if (!User.user.getRegistred()) {
+        if (!User.user.getRegistered()) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             Header header = (Header)getSupportFragmentManager().findFragmentById(R.id.headerFragment);
             fragmentTransaction.hide(header);

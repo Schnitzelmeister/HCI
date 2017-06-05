@@ -2,7 +2,6 @@ package com.example.uniwien.gesunderleben;
 
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
-import android.support.annotation.IntegerRes;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,25 +9,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xmlpull.v1.XmlPullParser;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 public class UserData4 extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
@@ -80,7 +68,7 @@ public class UserData4 extends AppCompatActivity implements AdapterView.OnItemSe
             desiredWeight.setText(String.valueOf(objVal));
 
         //hide Header
-        if (!User.user.getRegistred()) {
+        if (!User.user.getRegistered()) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             Header header = (Header)getSupportFragmentManager().findFragmentById(R.id.headerFragment);
             fragmentTransaction.hide(header);
@@ -112,8 +100,8 @@ public class UserData4 extends AppCompatActivity implements AdapterView.OnItemSe
                     User.user.setActualParam( ParameterEnum.Fitnessplan, fitnessplan.getSelectedItem().toString() );
 
                 //set registred flag
-                if (!User.user.getRegistred())
-                    User.user.setRegistred();
+                if (!User.user.getRegistered())
+                    User.user.setRegistered();
 
                 try {
                     User.saveUser();
